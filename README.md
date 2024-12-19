@@ -59,5 +59,7 @@ I've been continuing to modify this game to add new features as I complete more 
   |![First Image](https://rvnprojectstorage.blob.core.windows.net/images/Console.MathGame/MainMenu.png?h=750&w=1260)|![Second Image](https://rvnprojectstorage.blob.core.windows.net/images/Console.MathGame/GameType.png?h=750&w=1260)|![Third Image](https://rvnprojectstorage.blob.core.windows.net/images/Console.MathGame/GameSettings.png?h=750&w=1260)
 
 ## View Current Entries
-- The main menu also offers the option to view all current entries in the database
-
+- The main menu also offers the option to view game records in the database in a table
+  |Main Menu|
+  |:-:|
+  |![First Image](https://rvnprojectstorage.blob.core.windows.net/images/Console.MathGame/GameHistory.png?h=750&w=1260)|
