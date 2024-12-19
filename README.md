@@ -37,7 +37,7 @@ I've been continuing to modify this game to add new features as I complete more 
   The game was modified to use the Spectre.Console library with enums for the main menu options instead. Now the player uses the up and down arrow to choose the option. This allowed me to remove the logic of checking for an incorrect choice the the choices are fixed.
   Instead of having all options displayed on the main menu, it's been modified to have the main menu just show three options of play game, view history or exit, and then the play game option will present the game type selection. I think this makes for a cleaner interface.
   I've also converted the game history to use an SQLite database so records can be saved outside of the current session.
-  ![Screenshot of the original Game Menu](https://rvnprojectstorage.blob.core.windows.net/images/Console.MathGame.Original/ConsoleMathGame_GameHistory_Original.png)
+  
 
 ## Features
 - SQLite Database Connection
@@ -49,6 +49,9 @@ I've been continuing to modify this game to add new features as I complete more 
 - The main menu consists of the options to play a round of the game, view the history, or exit
 - Selecting play game will bring up another menu to select which type of game you want to play (Addition, Subtraction, Multiplication, Division or Random)
 - Before starting the game, you can customize it to select the number of questions and the difficulty of the game
+
+- Here is what the original Game menu and history looked like
+  ![Screenshot of the original Game Menu](https://rvnprojectstorage.blob.core.windows.net/images/Console.MathGame.Original/ConsoleMathGame_GameHistory_Original.png)
 
 ## View Current Entries
 - The main menu also offers the option to view all current entries in the database
