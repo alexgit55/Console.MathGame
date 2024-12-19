@@ -53,6 +53,11 @@ I've been continuing to modify this game to add new features as I complete more 
 - Here is what the original Game menu and history looked like
   ![Screenshot of the original Game Menu](https://rvnprojectstorage.blob.core.windows.net/images/Console.MathGame.Original/ConsoleMathGame_GameHistory_Original.png)
 
+- Here's screenshots from the current menus: Main, Game Type and Settings
+  |First Image|Second Image|Third Image|
+  |:-:|:-:|:-:|
+  |![First Image](https://rvnprojectstorage.blob.core.windows.net/images/Console.MathGame/MainMenu.png?h=750&w=1260)|![Second Image](https://rvnprojectstorage.blob.core.windows.net/images/Console.MathGame/GameType.png?h=750&w=1260)|![Third Image](https://rvnprojectstorage.blob.core.windows.net/images/Console.MathGame/GameSettings.png?h=750&w=1260)
+
 ## View Current Entries
 - The main menu also offers the option to view all current entries in the database
 
