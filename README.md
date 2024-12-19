@@ -36,7 +36,8 @@ I've been continuing to modify this game to add new features as I complete more 
 - 12/19/2024 - The original game menu was a simple string menu and you entered the number of what you wanted to do.  I had to have logic here to check for an incorrect choice. The game history also only recorded into list so it wouldn't last past the current session.
   The game was modified to use the Spectre.Console library with enums for the main menu options instead. Now the player uses the up and down arrow to choose the option. This allowed me to remove the logic of checking for an incorrect choice the the choices are fixed.
   Instead of having all options displayed on the main menu, it's been modified to have the main menu just show three options of play game, view history or exit, and then the play game option will present the game type selection. I think this makes for a cleaner interface.
-  I've also converted the game history to use an SQLite database so records can be saved outside of the current session.  
+  I've also converted the game history to use an SQLite database so records can be saved outside of the current session.
+  ![Screenshot of the original Game Menu](https://rvnprojectstorage.blob.core.windows.net/images/Console.MathGame.Original/ConsoleMathGame_GameHistory_Original.png)
 
 ## Features
 - SQLite Database Connection
