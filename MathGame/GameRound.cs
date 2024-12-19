@@ -88,7 +88,7 @@ namespace MathGame.alexgit55
         internal void PlayGame()
         {
             StartTime = DateTime.Now;
-            int operation;
+            int operation=GameType;
 
             for (int i = 1; i <= TotalQuestions; i++)
             {
@@ -96,10 +96,6 @@ namespace MathGame.alexgit55
                 {
                     Random rand = new();
                     operation = rand.Next(0, 4);
-                }
-                else
-                {
-                    operation = GameType;
                 }
 
                 Console.WriteLine($"Question {i} of {TotalQuestions}");

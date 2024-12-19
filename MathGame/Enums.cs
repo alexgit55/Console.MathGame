@@ -8,15 +8,20 @@ namespace MathGame.alexgit55
 {
     internal class Enums
     {
-        internal enum MenuOptions
+        internal enum MainMenuOptions
+        {
+            PlayGame = 1,
+            ViewHistory,
+            Exit
+        }
+
+        internal enum GameType
         {
             Addition,
             Subtraction,
             Multiplication,
             Division,
-            Random,
-            History,
-            Exit
+            Random
         }
     }
 }

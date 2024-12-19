@@ -22,40 +22,40 @@ namespace MathGame.alexgit55
             {
                 //Console.Clear();
                 
+                AnsiConsole.MarkupLine("[bold] Welcome to the Math Game![/]");
+                AnsiConsole.MarkupLine("[bold] -------------------------[/]\n");
 
                 var usersChoice = AnsiConsole.Prompt(
-                   new SelectionPrompt<Enums.MenuOptions>()
+                   new SelectionPrompt<MainMenuOptions>()
                     .Title("What would you like to do?")
                     .AddChoices(
-                       MenuOptions.Addition,
-                       MenuOptions.Subtraction,
-                       MenuOptions.Multiplication,
-                       MenuOptions.Division,
-                       MenuOptions.Random,
-                       MenuOptions.History,
-                       MenuOptions.Exit
+                       MainMenuOptions.PlayGame,
+                       MainMenuOptions.ViewHistory,
+                       MainMenuOptions.Exit
                     )
                 );
 
                 switch (usersChoice)
                 {
-                    case MenuOptions.History:
+                    case MainMenuOptions.ViewHistory:
                         Console.Clear();
                         history.ViewGameHistory();
                         break;
-                    case MenuOptions.Exit:
+                    case MainMenuOptions.Exit:
                         Console.Clear();
                         Console.WriteLine("Thanks for Playing! Goodbye!");
                         GameMessage = "Press any key to exit";
                         keepPlayingGame = false;
                         break;
-                    default:
+                    case MainMenuOptions.PlayGame:
                         Console.Clear();
-                        Console.WriteLine($"You selected: {usersChoice}");
-                        var GameRound = new GameRound((int)usersChoice);
+                        var gameChoice = ChooseGameType();
+                        Console.Clear();
+                        Console.WriteLine($"You selected: {gameChoice}");
+                        var GameRound = new GameRound((int)gameChoice);
                         GameRound.SetGameSettings();
                         GameRound.PlayGame();
-                        history.SameGameToDatabase(usersChoice, GameRound.PlayerScore, GameRound.Difficulty, GameRound.TimeElapsed);
+                        history.SameGameToDatabase(gameChoice, GameRound.PlayerScore, GameRound.Difficulty, GameRound.TimeElapsed);
                         break;
                 }
 
@@ -63,6 +63,23 @@ namespace MathGame.alexgit55
                 Console.ReadKey();
                 Console.Clear();
             }
+        }
+
+        internal static GameType ChooseGameType()
+        {
+            var gameChoice = AnsiConsole.Prompt(
+                new SelectionPrompt<GameType>()
+                    .Title("Choose a game type")
+                    .AddChoices(
+                        GameType.Addition,
+                        GameType.Subtraction,
+                        GameType.Multiplication,
+                        GameType.Division,
+                        GameType.Random
+                    )
+            );
+
+            return gameChoice;
         }
     }
 }
