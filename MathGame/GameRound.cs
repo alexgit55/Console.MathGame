@@ -50,12 +50,16 @@ namespace MathGame.alexgit55
 
         internal void SetGameDifficulty()
         {
-            var difficulty = 1;
-            Console.WriteLine("Enter the difficulty level (1-3): ");
-            while (!int.TryParse(Console.ReadLine(), out difficulty) || difficulty < 1 || difficulty > 3)
-            {
-                Console.WriteLine("Please enter a valid number between 1 and 3.");
-            }
+            var difficulty = AnsiConsole.Prompt(
+                new TextPrompt<int>($"Select the game difficulty (1-3)")
+                    .DefaultValue(2)
+                    .Validate(gameDifficulty =>
+                    {
+                        if (gameDifficulty < 1 || gameDifficulty > 3)
+                            return ValidationResult.Error("Please enter a number between 1 and 3.");
+                        return ValidationResult.Success();
+                    })
+            );
 
             Difficulty = difficulty;
 
@@ -75,12 +79,16 @@ namespace MathGame.alexgit55
 
         internal void SetTotalQuestions()
         {
-            var totalQuestions = 0;
-            Console.WriteLine("Enter the number of questions you want to answer (1-20): ");
-            while (!int.TryParse(Console.ReadLine(), out totalQuestions) || totalQuestions < 1 || totalQuestions > 20)
-            {
-                Console.WriteLine("Please enter a valid number between 1 and 20.");
-            }
+            var totalQuestions = AnsiConsole.Prompt(
+                new TextPrompt<int>($"Enter the number of questions you would like to answer (1-20)")
+                    .DefaultValue(10)
+                    .Validate(question =>
+                    {
+                        if (question < 1 || question > 20)
+                            return ValidationResult.Error("Please enter a number between 1 and 20.");
+                        return ValidationResult.Success();
+                    })
+            );
 
             TotalQuestions = totalQuestions;
         }
