@@ -13,9 +13,11 @@ namespace MathGame.alexgit55
         internal static void MainMenu()
         {
             var history = new GameHistory();
+            history.CreateDatabase();
+
             var keepPlayingGame = true;
             var GameMessage = "Press any key to continue";
-            AnsiConsole.Write(new Markup("[bold yellow]Hello[/] [red]World![/]"));
+
             while (keepPlayingGame)
             {
                 //Console.Clear();
@@ -53,12 +55,13 @@ namespace MathGame.alexgit55
                         var GameRound = new GameRound((int)usersChoice);
                         GameRound.SetGameSettings();
                         GameRound.PlayGame();
-                        history.SaveGameScore(usersChoice,GameRound.PlayerScore,GameRound.Difficulty, GameRound.TimeElapsed);
+                        history.SameGameToDatabase(usersChoice, GameRound.PlayerScore, GameRound.Difficulty, GameRound.TimeElapsed);
                         break;
                 }
 
                 Console.WriteLine(GameMessage);
                 Console.ReadKey();
+                Console.Clear();
             }
         }
     }

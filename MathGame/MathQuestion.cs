@@ -50,13 +50,13 @@ namespace MathGame.alexgit55
             int num1 = 0;
             int num2 = 1;
             // Generate two random numbers between lowerRange and upperRange
-            // Ensure that num1 is divisible by num2
+            // Ensure that num1 is divisible by num2 and that num1 is not equal to num2
             do
             {
                 Random rand = new();
-                num1 = rand.Next(_lowerRange, _upperRange);
-                num2 = rand.Next(_lowerRange, _upperRange);
-            } while (num1 % num2 != 0);
+                num1 = rand.Next(_lowerRange, _upperRange+50);
+                num2 = rand.Next(_lowerRange, _upperRange+50);
+            } while ((num1 % num2 != 0) || (num1 == num2));
 
             // Ask the user to solve the division problem
             Console.WriteLine($"What is the quotient of {num1} / {num2}?");

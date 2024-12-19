@@ -6,6 +6,8 @@
  * class to save the round's data
  */
 
+using Spectre.Console;
+
 namespace MathGame.alexgit55
 {
     internal class GameRound
@@ -38,6 +40,12 @@ namespace MathGame.alexgit55
             Console.WriteLine("Now, let's customize your game settings...");
             SetTotalQuestions();
             SetGameDifficulty();
+
+            AnsiConsole.MarkupLine($"[bold]You have chosen to play {TotalQuestions} questions with a difficulty of {Difficulty}[/]\n");
+            AnsiConsole.MarkupLine($"All Set!\n");
+            AnsiConsole.MarkupLine($"Press any key to start the game...");
+            Console.ReadKey();
+            Console.Clear();
         }
 
         internal void SetGameDifficulty()
@@ -97,6 +105,7 @@ namespace MathGame.alexgit55
                 Console.WriteLine($"Question {i} of {TotalQuestions}");
                 var question = new MathQuestion(operation,LowerRange,UpperRange);
                 PlayerScore += question.GenerateMathQuestion();
+                Console.ReadKey();
                 Console.Clear();
             }
 
