@@ -60,6 +60,6 @@ I've been continuing to modify this game to add new features as I complete more 
 
 ## View Current Entries
 - The main menu also offers the option to view game records in the database in a table
-  |Main Menu|
+  |Game History|
   |:-:|
   |![First Image](https://rvnprojectstorage.blob.core.windows.net/images/Console.MathGame/GameHistory.png?h=750&w=1260)|
