@@ -41,7 +41,7 @@ namespace MathGame.alexgit55
             SetTotalQuestions();
             SetGameDifficulty();
 
-            AnsiConsole.MarkupLine($"[bold]You have chosen to play {TotalQuestions} questions with a difficulty of {Difficulty}[/]\n");
+            AnsiConsole.MarkupLine($"[bold]You have chosen to play [blue]{TotalQuestions}[/] questions with a difficulty of [blue]{Difficulty}[/][/]\n");
             AnsiConsole.MarkupLine($"All Set!\n");
             AnsiConsole.MarkupLine($"Press any key to start the game...");
             Console.ReadKey();
