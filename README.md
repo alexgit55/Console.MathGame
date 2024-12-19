@@ -44,10 +44,11 @@ I've been continuing to modify this game to add new features as I complete more 
 - If no database/table exists when starting the program, it will create one automatically.
 
 ## Console Based UI
-- This application featues a text based menu and navigation system to access its functions
-- For most options, entering '0' will halt the operation and go back to the main menu. If entered from the main menu, it will exit the application.
-- ![Screenshot of the main menu of the application.](https://rvnprojectstorage.blob.core.windows.net/images/habittracker_menu.png)
+- This application featues menu based navigation using the Spectre.Console library
+- The main menu consists of the options to play a round of the game, view the history, or exit
+- Selecting play game will bring up another menu to select which type of game you want to play (Addition, Subtraction, Multiplication, Division or Random)
+- Before starting the game, you can customize it to select the number of questions and the difficulty of the game
 
 ## View Current Entries
 - The main menu also offers the option to view all current entries in the database
-- ![Screenshot of the the view operation](https://rvnprojectstorage.blob.core.windows.net/images/habittracker_viewrecords.png)
+
